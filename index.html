@@ -11,18 +11,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .menu-item-card {
+            transition: all 0.3s ease;
+        }
+        .menu-item-card:hover {
+            transform: translateY(-8px);
+        }
+        .menu-item-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
 <body class="font-poppins bg-amber-50 text-gray-800">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-md z-50">
+    <nav class="fixed w-full glass-effect shadow-lg z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-playfair font-bold text-amber-800">Spice Garden</div>
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="hover:text-amber-600 transition">Home</a>
-                <a href="#about" class="hover:text-amber-600 transition">About</a>
-                <a href="#menu" class="hover:text-amber-600 transition">Menu</a>
-                <a href="#gallery" class="hover:text-amber-600 transition">Gallery</a>
-                <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+                <a href="#home" class="hover:text-amber-600 transition font-medium">Home</a>
+                <a href="#about" class="hover:text-amber-600 transition font-medium">About</a>
+                <a href="#menu" class="hover:text-amber-600 transition font-medium">Menu</a>
+                <a href="#gallery" class="hover:text-amber-600 transition font-medium">Gallery</a>
+                <a href="#contact" class="hover:text-amber-600 transition font-medium">Contact</a>
             </div>
             <button class="md:hidden focus:outline-none" id="menu-toggle">
                 <i data-feather="menu"></i>
@@ -41,52 +65,52 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center bg-gradient-to-r from-amber-900 to-amber-700">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
+    <section id="home" class="relative h-screen flex items-center justify-center hero-bg">
         <div class="container mx-auto px-6 z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-playfair font-bold text-white mb-4">Spice Garden</h1>
-            <p class="text-xl md:text-2xl text-amber-100 mb-8">Authentic Indian Cuisine</p>
+            <h1 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 leading-tight">Spice Garden</h1>
+            <p class="text-2xl md:text-3xl text-amber-100 mb-4">Authentic Indian Cuisine</p>
+            <p class="text-lg text-amber-50 mb-10 max-w-2xl mx-auto">Experience the rich flavors and aromatic spices of India in every bite</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-medium transition flex items-center justify-center gap-2">
+                <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-medium transition flex items-center justify-center gap-2 shadow-xl">
                     <i data-feather="message-circle"></i> Book via WhatsApp
                 </a>
-                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-amber-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center justify-center gap-2">
-                    <i data-feather="map-pin"></i> Get Directions
+                <a href="#menu" class="bg-transparent border-2 border-white hover:bg-white hover:text-amber-800 text-white px-8 py-4 rounded-full font-medium transition flex items-center justify-center gap-2">
+                    <i data-feather="book-open"></i> View Menu
                 </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-playfair font-bold text-center text-amber-800 mb-12">Our Story</h2>
+            <h2 class="text-4xl font-playfair font-bold text-center text-amber-800 mb-16">Our Story</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="http://static.photos/food/1024x576/42" alt="Restaurant Interior" class="rounded-lg shadow-xl w-full h-auto">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant Interior" class="rounded-2xl shadow-2xl w-full h-auto">
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-playfair font-semibold text-amber-700 mb-4">A Taste of India in Every Bite</h3>
-                    <p class="text-gray-600 mb-4">Spice Garden brings you the authentic flavors of India in a warm, inviting atmosphere. Our chefs use traditional recipes passed down through generations, combined with the freshest ingredients to create unforgettable dining experiences.</p>
-                    <p class="text-gray-600 mb-6">Enjoy our rooftop dining area with panoramic city views, perfect for family gatherings or romantic evenings. Our family-friendly environment welcomes guests of all ages to experience the rich culinary heritage of India.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex items-center gap-2">
-                            <div class="bg-amber-100 p-2 rounded-full">
-                                <i data-feather="clock" class="text-amber-600"></i>
+                    <h3 class="text-3xl font-playfair font-semibold text-amber-700 mb-6">A Taste of India in Every Bite</h3>
+                    <p class="text-gray-600 mb-4 text-lg leading-relaxed">Spice Garden brings you the authentic flavors of India in a warm, inviting atmosphere. Our chefs use traditional recipes passed down through generations, combined with the freshest ingredients to create unforgettable dining experiences.</p>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">Enjoy our rooftop dining area with panoramic city views, perfect for family gatherings or romantic evenings. Our family-friendly environment welcomes guests of all ages to experience the rich culinary heritage of India.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex flex-col items-center text-center p-4 bg-amber-50 rounded-xl">
+                            <div class="bg-amber-600 p-3 rounded-full mb-3">
+                                <i data-feather="clock" class="text-white"></i>
                             </div>
-                            <span>Open 7 Days</span>
+                            <span class="font-semibold text-gray-800">Open 7 Days</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <div class="bg-amber-100 p-2 rounded-full">
-                                <i data-feather="users" class="text-amber-600"></i>
+                        <div class="flex flex-col items-center text-center p-4 bg-amber-50 rounded-xl">
+                            <div class="bg-amber-600 p-3 rounded-full mb-3">
+                                <i data-feather="users" class="text-white"></i>
                             </div>
-                            <span>Family Friendly</span>
+                            <span class="font-semibold text-gray-800">Family Friendly</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <div class="bg-amber-100 p-2 rounded-full">
-                                <i data-feather="sun" class="text-amber-600"></i>
+                        <div class="flex flex-col items-center text-center p-4 bg-amber-50 rounded-xl">
+                            <div class="bg-amber-600 p-3 rounded-full mb-3">
+                                <i data-feather="sun" class="text-white"></i>
                             </div>
-                            <span>Rooftop Dining</span>
+                            <span class="font-semibold text-gray-800">Rooftop Dining</span>
                         </div>
                     </div>
                 </div>
@@ -95,22 +119,23 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-amber-50">
+    <section id="menu" class="py-24 bg-gradient-to-br from-amber-50 to-orange-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-playfair font-bold text-center text-amber-800 mb-12">Our Menu</h2>
+            <h2 class="text-4xl font-playfair font-bold text-center text-amber-800 mb-6">Our Menu</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">Explore our carefully curated selection of authentic Indian dishes, crafted with love and the finest ingredients</p>
             
             <div class="flex justify-center mb-12">
-                <div class="inline-flex rounded-md shadow-sm" role="group">
-                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium rounded-l-lg bg-amber-600 text-white" data-category="starters">
+                <div class="inline-flex rounded-xl shadow-lg bg-white p-1" role="group">
+                    <button type="button" class="menu-category px-6 py-3 text-sm font-medium rounded-lg bg-amber-600 text-white transition" data-category="starters">
                         Starters
                     </button>
-                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium bg-white text-amber-800" data-category="mains">
+                    <button type="button" class="menu-category px-6 py-3 text-sm font-medium bg-white text-amber-800 hover:bg-amber-50 transition" data-category="mains">
                         Main Course
                     </button>
-                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium bg-white text-amber-800" data-category="breads">
+                    <button type="button" class="menu-category px-6 py-3 text-sm font-medium bg-white text-amber-800 hover:bg-amber-50 transition" data-category="breads">
                         Breads
                     </button>
-                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium rounded-r-lg bg-white text-amber-800" data-category="desserts">
+                    <button type="button" class="menu-category px-6 py-3 text-sm font-medium rounded-lg bg-white text-amber-800 hover:bg-amber-50 transition" data-category="desserts">
                         Desserts
                     </button>
                 </div>
@@ -118,175 +143,220 @@
 
             <div id="menu-items" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Starters -->
-                <div class="menu-item starters bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Samosa</h3>
-                        <span class="text-amber-600 font-medium">$5.99</span>
+                <div class="menu-item starters menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Samosa" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Samosa</h3>
+                            <span class="text-amber-600 font-bold text-lg">$5.99</span>
+                        </div>
+                        <p class="text-gray-600">Crispy pastry filled with spiced potatoes and peas</p>
                     </div>
-                    <p class="text-gray-600">Crispy pastry filled with spiced potatoes and peas</p>
                 </div>
-                <div class="menu-item starters bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Paneer Tikka</h3>
-                        <span class="text-amber-600 font-medium">$8.99</span>
+                <div class="menu-item starters menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80" alt="Paneer Tikka" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Paneer Tikka</h3>
+                            <span class="text-amber-600 font-bold text-lg">$8.99</span>
+                        </div>
+                        <p class="text-gray-600">Grilled cottage cheese marinated in spices and yogurt</p>
                     </div>
-                    <p class="text-gray-600">Grilled cottage cheese marinated in spices and yogurt</p>
                 </div>
-                <div class="menu-item starters bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Chicken 65</h3>
-                        <span class="text-amber-600 font-medium">$9.99</span>
+                <div class="menu-item starters menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a5b98f7e2?w=600&q=80" alt="Chicken 65" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Chicken 65</h3>
+                            <span class="text-amber-600 font-bold text-lg">$9.99</span>
+                        </div>
+                        <p class="text-gray-600">Spicy, deep-fried chicken appetizer with South Indian flavors</p>
                     </div>
-                    <p class="text-gray-600">Spicy, deep-fried chicken appetizer</p>
                 </div>
                 
                 <!-- Mains -->
-                <div class="menu-item mains hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Butter Chicken</h3>
-                        <span class="text-amber-600 font-medium">$15.99</span>
+                <div class="menu-item mains hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=80" alt="Butter Chicken" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Butter Chicken</h3>
+                            <span class="text-amber-600 font-bold text-lg">$15.99</span>
+                        </div>
+                        <p class="text-gray-600">Tender chicken in rich, creamy tomato sauce with butter</p>
                     </div>
-                    <p class="text-gray-600">Tender chicken in creamy tomato sauce</p>
                 </div>
-                <div class="menu-item mains hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Lamb Rogan Josh</h3>
-                        <span class="text-amber-600 font-medium">$18.99</span>
+                <div class="menu-item mains hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80" alt="Lamb Rogan Josh" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Lamb Rogan Josh</h3>
+                            <span class="text-amber-600 font-bold text-lg">$18.99</span>
+                        </div>
+                        <p class="text-gray-600">Aromatic lamb curry with authentic Kashmiri spices</p>
                     </div>
-                    <p class="text-gray-600">Aromatic lamb curry with Kashmiri spices</p>
                 </div>
-                <div class="menu-item mains hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Dal Makhani</h3>
-                        <span class="text-amber-600 font-medium">$12.99</span>
+                <div class="menu-item mains hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80" alt="Dal Makhani" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Dal Makhani</h3>
+                            <span class="text-amber-600 font-bold text-lg">$12.99</span>
+                        </div>
+                        <p class="text-gray-600">Creamy black lentils slow-cooked with butter and cream</p>
                     </div>
-                    <p class="text-gray-600">Creamy black lentils slow-cooked with butter</p>
                 </div>
                 
                 <!-- Breads -->
-                <div class="menu-item breads hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Garlic Naan</h3>
-                        <span class="text-amber-600 font-medium">$3.99</span>
+                <div class="menu-item breads hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=600&q=80" alt="Garlic Naan" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Garlic Naan</h3>
+                            <span class="text-amber-600 font-bold text-lg">$3.99</span>
+                        </div>
+                        <p class="text-gray-600">Soft leavened flatbread topped with garlic butter</p>
                     </div>
-                    <p class="text-gray-600">Leavened flatbread with garlic butter</p>
                 </div>
-                <div class="menu-item breads hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Roti</h3>
-                        <span class="text-amber-600 font-medium">$2.99</span>
+                <div class="menu-item breads hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80" alt="Roti" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Roti</h3>
+                            <span class="text-amber-600 font-bold text-lg">$2.99</span>
+                        </div>
+                        <p class="text-gray-600">Traditional whole wheat unleavened flatbread</p>
                     </div>
-                    <p class="text-gray-600">Whole wheat unleavened flatbread</p>
                 </div>
-                <div class="menu-item breads hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Peshawari Naan</h3>
-                        <span class="text-amber-600 font-medium">$4.99</span>
+                <div class="menu-item breads hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1663341264957-cbe37f1ced0e?w=600&q=80" alt="Peshawari Naan" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Peshawari Naan</h3>
+                            <span class="text-amber-600 font-bold text-lg">$4.99</span>
+                        </div>
+                        <p class="text-gray-600">Sweet naan stuffed with nuts, raisins, and coconut</p>
                     </div>
-                    <p class="text-gray-600">Sweet naan stuffed with nuts and raisins</p>
                 </div>
                 
                 <!-- Desserts -->
-                <div class="menu-item desserts hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Gulab Jamun</h3>
-                        <span class="text-amber-600 font-medium">$6.99</span>
+                <div class="menu-item desserts hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?w=600&q=80" alt="Gulab Jamun" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Gulab Jamun</h3>
+                            <span class="text-amber-600 font-bold text-lg">$6.99</span>
+                        </div>
+                        <p class="text-gray-600">Deep-fried milk balls soaked in rose-scented sugar syrup</p>
                     </div>
-                    <p class="text-gray-600">Deep-fried milk balls in sugar syrup</p>
                 </div>
-                <div class="menu-item desserts hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Kheer</h3>
-                        <span class="text-amber-600 font-medium">$5.99</span>
+                <div class="menu-item desserts hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Kheer" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Kheer</h3>
+                            <span class="text-amber-600 font-bold text-lg">$5.99</span>
+                        </div>
+                        <p class="text-gray-600">Traditional rice pudding with cardamom and nuts</p>
                     </div>
-                    <p class="text-gray-600">Traditional rice pudding with cardamom</p>
                 </div>
-                <div class="menu-item desserts hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-semibold">Mango Lassi</h3>
-                        <span class="text-amber-600 font-medium">$4.99</span>
+                <div class="menu-item desserts hidden menu-item-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=600&q=80" alt="Mango Lassi" class="menu-item-img">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Mango Lassi</h3>
+                            <span class="text-amber-600 font-bold text-lg">$4.99</span>
+                        </div>
+                        <p class="text-gray-600">Refreshing yogurt drink blended with sweet mango</p>
                     </div>
-                    <p class="text-gray-600">Refreshing yogurt drink with mango</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-white">
+    <section id="gallery" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-playfair font-bold text-center text-amber-800 mb-12">Gallery</h2>
+            <h2 class="text-4xl font-playfair font-bold text-center text-amber-800 mb-6">Gallery</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">Visual journey through our authentic Indian culinary experience</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <img src="http://static.photos/food/640x360/1" alt="Food 1" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                <div class="gallery-item overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80" alt="Indian Curry" class="w-full h-72 object-cover hover:scale-110 transition duration-700">
                 </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <img src="http://static.photos/food/640x360/2" alt="Food 2" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                <div class="gallery-item overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80" alt="Indian Thali" class="w-full h-72 object-cover hover:scale-110 transition duration-700">
                 </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <img src="http://static.photos/food/640x360/3" alt="Food 3" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                <div class="gallery-item overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800&q=80" alt="Biryani" class="w-full h-72 object-cover hover:scale-110 transition duration-700">
                 </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <img src="http://static.photos/food/640x360/4" alt="Food 4" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                <div class="gallery-item overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1589301773859-cb57c90dc290?w=800&q=80" alt="Indian Appetizers" class="w-full h-72 object-cover hover:scale-110 transition duration-700">
                 </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <img src="http://static.photos/food/640x360/5" alt="Food 5" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                <div class="gallery-item overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&q=80" alt="Butter Chicken" class="w-full h-72 object-cover hover:scale-110 transition duration-700">
                 </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
-                    <img src="http://static.photos/food/640x360/6" alt="Food 6" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                <div class="gallery-item overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80" alt="Indian Sweets" class="w-full h-72 object-cover hover:scale-110 transition duration-700">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-amber-800 text-white">
+    <section id="contact" class="py-24 bg-gradient-to-br from-amber-800 to-orange-900 text-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-playfair font-bold text-center mb-12">Visit Us</h2>
+            <h2 class="text-4xl font-playfair font-bold text-center mb-16">Visit Us</h2>
             <div class="flex flex-col md:flex-row gap-12">
                 <div class="md:w-1/2">
-                    <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
-                        <div class="space-y-4">
+                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
                             <div class="flex items-start gap-4">
-                                <i data-feather="map-pin" class="mt-1"></i>
+                                <div class="bg-amber-600 p-3 rounded-full">
+                                    <i data-feather="map-pin" class="mt-1"></i>
+                                </div>
                                 <div>
-                                    <h4 class="font-medium">Address</h4>
-                                    <p>123 Spice Street, Food District<br>New York, NY 10001</p>
+                                    <h4 class="font-semibold text-lg mb-1">Address</h4>
+                                    <p class="text-amber-100">123 Spice Street, Food District<br>New York, NY 10001</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
-                                <i data-feather="phone" class="mt-1"></i>
+                                <div class="bg-amber-600 p-3 rounded-full">
+                                    <i data-feather="phone" class="mt-1"></i>
+                                </div>
                                 <div>
-                                    <h4 class="font-medium">Phone</h4>
-                                    <p><a href="tel:+1234567890" class="hover:underline">(123) 456-7890</a></p>
+                                    <h4 class="font-semibold text-lg mb-1">Phone</h4>
+                                    <p class="text-amber-100"><a href="tel:+1234567890" class="hover:underline">(123) 456-7890</a></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
-                                <i data-feather="mail" class="mt-1"></i>
+                                <div class="bg-amber-600 p-3 rounded-full">
+                                    <i data-feather="mail" class="mt-1"></i>
+                                </div>
                                 <div>
-                                    <h4 class="font-medium">Email</h4>
-                                    <p><a href="mailto:info@spicegarden.com" class="hover:underline">info@spicegarden.com</a></p>
+                                    <h4 class="font-semibold text-lg mb-1">Email</h4>
+                                    <p class="text-amber-100"><a href="mailto:info@spicegarden.com" class="hover:underline">info@spicegarden.com</a></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
-                                <i data-feather="clock" class="mt-1"></i>
+                                <div class="bg-amber-600 p-3 rounded-full">
+                                    <i data-feather="clock" class="mt-1"></i>
+                                </div>
                                 <div>
-                                    <h4 class="font-medium">Hours</h4>
-                                    <p>Monday - Sunday: 11:00 AM - 10:00 PM</p>
+                                    <h4 class="font-semibold text-lg mb-1">Hours</h4>
+                                    <p class="text-amber-100">Monday - Sunday<br>11:00 AM - 10:00 PM</p>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-8">
-                            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="bg-white text-amber-800 hover:bg-amber-100 px-6 py-3 rounded-full font-medium transition flex items-center justify-center gap-2 w-full">
+                            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="bg-white text-amber-800 hover:bg-amber-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center gap-2 w-full shadow-xl">
                                 <i data-feather="message-circle"></i> Book a Table
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <div class="h-full w-full rounded-lg overflow-hidden shadow-xl">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510499!2d-73.9878449240156!3d40.74844097138945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1712345678901!5m2!1sen!2sus" width="100%" height="100%" style="min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="h-full w-full rounded-2xl overflow-hidden shadow-2xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510499!2d-73.9878449240156!3d40.74844097138945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1712345678901!5m2!1sen!2sus" width="100%" height="100%" style="min-height: 500px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -294,16 +364,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-amber-900 text-white py-12">
+    <footer class="bg-amber-950 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <h2 class="text-2xl font-playfair font-bold">Spice Garden</h2>
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h2 class="text-3xl font-playfair font-bold mb-2">Spice Garden</h2>
                     <p class="text-amber-200">Authentic Indian Cuisine</p>
                 </div>
                 <div class="flex flex-col md:flex-row gap-8 md:gap-12">
                     <div>
-                        <h3 class="font-semibold mb-2">Quick Links</h3>
+                        <h3 class="font-semibold mb-3 text-lg">Quick Links</h3>
                         <ul class="space-y-2">
                             <li><a href="#home" class="hover:text-amber-300 transition">Home</a></li>
                             <li><a href="#about" class="hover:text-amber-300 transition">About</a></li>
@@ -313,29 +383,74 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="font-semibold mb-2">Follow Us</h3>
+                        <h3 class="font-semibold mb-3 text-lg">Follow Us</h3>
                         <div class="flex gap-4">
-                            <a href="#" class="hover:text-amber-300 transition"><i data-feather="facebook"></i></a>
-                            <a href="#" class="hover:text-amber-300 transition"><i data-feather="instagram"></i></a>
-                            <a href="#" class="hover:text-amber-300 transition"><i data-feather="twitter"></i></a>
+                            <a href="#" class="bg-amber-800 p-2 rounded-full hover:bg-amber-700 transition"><i data-feather="facebook"></i></a>
+                            <a href="#" class="bg-amber-800 p-2 rounded-full hover:bg-amber-700 transition"><i data-feather="instagram"></i></a>
+                            <a href="#" class="bg-amber-800 p-2 rounded-full hover:bg-amber-700 transition"><i data-feather="twitter"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-amber-800 mt-12 pt-8 text-center text-sm text-amber-200">
-                <p>&copy; 2023 Spice Garden. All rights reserved.</p>
+            <div class="border-t border-amber-900 mt-12 pt-8 text-center text-sm text-amber-200">
+                <p>&copy; 2025 Spice Garden. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition z-50">
+    <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition z-50 hover:scale-110">
         <i data-feather="message-circle" class="w-6 h-6"></i>
     </a>
 
-    <script src="script.js"></script>
     <script>
+        // Menu toggle for mobile
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Menu category switching
+        const menuButtons = document.querySelectorAll('.menu-category');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                
+                // Update button styles
+                menuButtons.forEach(btn => {
+                    btn.classList.remove('bg-amber-600', 'text-white');
+                    btn.classList.add('bg-white', 'text-amber-800');
+                });
+                this.classList.remove('bg-white', 'text-amber-800');
+                this.classList.add('bg-amber-600', 'text-white');
+                
+                // Show/hide menu items
+                menuItems.forEach(item => {
+                    if (item.classList.contains(category)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Initialize Feather icons
         feather.replace();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
     </script>
 </body>
 </html>
