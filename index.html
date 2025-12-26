@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Garden | Authentic Indian Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-amber-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-playfair font-bold text-amber-800">Spice Garden</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-amber-600 transition">Home</a>
+                <a href="#about" class="hover:text-amber-600 transition">About</a>
+                <a href="#menu" class="hover:text-amber-600 transition">Menu</a>
+                <a href="#gallery" class="hover:text-amber-600 transition">Gallery</a>
+                <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full px-6 py-4" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-amber-600 transition">Home</a>
+                <a href="#about" class="hover:text-amber-600 transition">About</a>
+                <a href="#menu" class="hover:text-amber-600 transition">Menu</a>
+                <a href="#gallery" class="hover:text-amber-600 transition">Gallery</a>
+                <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-gradient-to-r from-amber-900 to-amber-700">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-playfair font-bold text-white mb-4">Spice Garden</h1>
+            <p class="text-xl md:text-2xl text-amber-100 mb-8">Authentic Indian Cuisine</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-medium transition flex items-center justify-center gap-2">
+                    <i data-feather="message-circle"></i> Book via WhatsApp
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-amber-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center justify-center gap-2">
+                    <i data-feather="map-pin"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-playfair font-bold text-center text-amber-800 mb-12">Our Story</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="http://static.photos/food/1024x576/42" alt="Restaurant Interior" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-playfair font-semibold text-amber-700 mb-4">A Taste of India in Every Bite</h3>
+                    <p class="text-gray-600 mb-4">Spice Garden brings you the authentic flavors of India in a warm, inviting atmosphere. Our chefs use traditional recipes passed down through generations, combined with the freshest ingredients to create unforgettable dining experiences.</p>
+                    <p class="text-gray-600 mb-6">Enjoy our rooftop dining area with panoramic city views, perfect for family gatherings or romantic evenings. Our family-friendly environment welcomes guests of all ages to experience the rich culinary heritage of India.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="bg-amber-100 p-2 rounded-full">
+                                <i data-feather="clock" class="text-amber-600"></i>
+                            </div>
+                            <span>Open 7 Days</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="bg-amber-100 p-2 rounded-full">
+                                <i data-feather="users" class="text-amber-600"></i>
+                            </div>
+                            <span>Family Friendly</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="bg-amber-100 p-2 rounded-full">
+                                <i data-feather="sun" class="text-amber-600"></i>
+                            </div>
+                            <span>Rooftop Dining</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-playfair font-bold text-center text-amber-800 mb-12">Our Menu</h2>
+            
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium rounded-l-lg bg-amber-600 text-white" data-category="starters">
+                        Starters
+                    </button>
+                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium bg-white text-amber-800" data-category="mains">
+                        Main Course
+                    </button>
+                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium bg-white text-amber-800" data-category="breads">
+                        Breads
+                    </button>
+                    <button type="button" class="menu-category px-4 py-2 text-sm font-medium rounded-r-lg bg-white text-amber-800" data-category="desserts">
+                        Desserts
+                    </button>
+                </div>
+            </div>
+
+            <div id="menu-items" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Starters -->
+                <div class="menu-item starters bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Samosa</h3>
+                        <span class="text-amber-600 font-medium">$5.99</span>
+                    </div>
+                    <p class="text-gray-600">Crispy pastry filled with spiced potatoes and peas</p>
+                </div>
+                <div class="menu-item starters bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Paneer Tikka</h3>
+                        <span class="text-amber-600 font-medium">$8.99</span>
+                    </div>
+                    <p class="text-gray-600">Grilled cottage cheese marinated in spices and yogurt</p>
+                </div>
+                <div class="menu-item starters bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Chicken 65</h3>
+                        <span class="text-amber-600 font-medium">$9.99</span>
+                    </div>
+                    <p class="text-gray-600">Spicy, deep-fried chicken appetizer</p>
+                </div>
+                
+                <!-- Mains -->
+                <div class="menu-item mains hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Butter Chicken</h3>
+                        <span class="text-amber-600 font-medium">$15.99</span>
+                    </div>
+                    <p class="text-gray-600">Tender chicken in creamy tomato sauce</p>
+                </div>
+                <div class="menu-item mains hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Lamb Rogan Josh</h3>
+                        <span class="text-amber-600 font-medium">$18.99</span>
+                    </div>
+                    <p class="text-gray-600">Aromatic lamb curry with Kashmiri spices</p>
+                </div>
+                <div class="menu-item mains hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Dal Makhani</h3>
+                        <span class="text-amber-600 font-medium">$12.99</span>
+                    </div>
+                    <p class="text-gray-600">Creamy black lentils slow-cooked with butter</p>
+                </div>
+                
+                <!-- Breads -->
+                <div class="menu-item breads hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Garlic Naan</h3>
+                        <span class="text-amber-600 font-medium">$3.99</span>
+                    </div>
+                    <p class="text-gray-600">Leavened flatbread with garlic butter</p>
+                </div>
+                <div class="menu-item breads hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Roti</h3>
+                        <span class="text-amber-600 font-medium">$2.99</span>
+                    </div>
+                    <p class="text-gray-600">Whole wheat unleavened flatbread</p>
+                </div>
+                <div class="menu-item breads hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Peshawari Naan</h3>
+                        <span class="text-amber-600 font-medium">$4.99</span>
+                    </div>
+                    <p class="text-gray-600">Sweet naan stuffed with nuts and raisins</p>
+                </div>
+                
+                <!-- Desserts -->
+                <div class="menu-item desserts hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Gulab Jamun</h3>
+                        <span class="text-amber-600 font-medium">$6.99</span>
+                    </div>
+                    <p class="text-gray-600">Deep-fried milk balls in sugar syrup</p>
+                </div>
+                <div class="menu-item desserts hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Kheer</h3>
+                        <span class="text-amber-600 font-medium">$5.99</span>
+                    </div>
+                    <p class="text-gray-600">Traditional rice pudding with cardamom</p>
+                </div>
+                <div class="menu-item desserts hidden bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Mango Lassi</h3>
+                        <span class="text-amber-600 font-medium">$4.99</span>
+                    </div>
+                    <p class="text-gray-600">Refreshing yogurt drink with mango</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-playfair font-bold text-center text-amber-800 mb-12">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <img src="http://static.photos/food/640x360/1" alt="Food 1" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <img src="http://static.photos/food/640x360/2" alt="Food 2" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <img src="http://static.photos/food/640x360/3" alt="Food 3" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <img src="http://static.photos/food/640x360/4" alt="Food 4" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <img src="http://static.photos/food/640x360/5" alt="Food 5" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-xl transition cursor-pointer">
+                    <img src="http://static.photos/food/640x360/6" alt="Food 6" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-amber-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-12">Visit Us</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <i data-feather="map-pin" class="mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Address</h4>
+                                    <p>123 Spice Street, Food District<br>New York, NY 10001</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-feather="phone" class="mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p><a href="tel:+1234567890" class="hover:underline">(123) 456-7890</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-feather="mail" class="mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p><a href="mailto:info@spicegarden.com" class="hover:underline">info@spicegarden.com</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-feather="clock" class="mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Hours</h4>
+                                    <p>Monday - Sunday: 11:00 AM - 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="bg-white text-amber-800 hover:bg-amber-100 px-6 py-3 rounded-full font-medium transition flex items-center justify-center gap-2 w-full">
+                                <i data-feather="message-circle"></i> Book a Table
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="h-full w-full rounded-lg overflow-hidden shadow-xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510499!2d-73.9878449240156!3d40.74844097138945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1712345678901!5m2!1sen!2sus" width="100%" height="100%" style="min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-playfair font-bold">Spice Garden</h2>
+                    <p class="text-amber-200">Authentic Indian Cuisine</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                    <div>
+                        <h3 class="font-semibold mb-2">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-amber-300 transition">Home</a></li>
+                            <li><a href="#about" class="hover:text-amber-300 transition">About</a></li>
+                            <li><a href="#menu" class="hover:text-amber-300 transition">Menu</a></li>
+                            <li><a href="#gallery" class="hover:text-amber-300 transition">Gallery</a></li>
+                            <li><a href="#contact" class="hover:text-amber-300 transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Follow Us</h3>
+                        <div class="flex gap-4">
+                            <a href="#" class="hover:text-amber-300 transition"><i data-feather="facebook"></i></a>
+                            <a href="#" class="hover:text-amber-300 transition"><i data-feather="instagram"></i></a>
+                            <a href="#" class="hover:text-amber-300 transition"><i data-feather="twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-12 pt-8 text-center text-sm text-amber-200">
+                <p>&copy; 2023 Spice Garden. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/1234567890?text=I'd%20like%20to%20book%20a%20table" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition z-50">
+        <i data-feather="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
